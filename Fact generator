@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Formula 1 Fun Fact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('f1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: #ff0000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1); 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); /* Apply blur effect */
+        }
+
+        h1 {
+            color: #e10600;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e10600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c00500;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FORMULA 1 FUN FACT</h1>
+        <button id="factButton">Show Random Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const facts = [
+                "Oldest Team: Ferrari is the oldest team in Formula 1, having competed since the inaugural season in 1950.",
+                "Fastest Pit Stop: The record for the fastest pit stop is held by Red Bull Racing, who completed a pit stop in just 1.82 seconds during the 2019 Brazilian Grand Prix.",
+                "Youngest World Champion: Sebastian Vettel became the youngest World Champion in F1 history at the age of 23 years and 134 days.",
+                "Most Wins by a Driver: Lewis Hamilton holds the record for the most Grand Prix wins.",
+                "First Night Race: The Singapore Grand Prix, introduced in 2008, was the first night race in Formula 1 history.",
+                "Speed Records: F1 cars can reach speeds of up to 230 mph (370 km/h).",
+                "Global Reach: Formula 1 is one of the most watched sports globally.",
+                "Innovations: Many technologies developed in F1 have been adapted for use in road cars.",
+                "Longest Race: The longest race in terms of time was the 2011 Canadian Grand Prix.",
+                "Historic Circuits: The Monaco Grand Prix is one of the most prestigious and challenging races.",
+                "First Champion: The first Formula 1 World Champion was Giuseppe Farina in 1950.",
+                "Most Constructors' Titles: Ferrari holds the record for the most Constructors' Championships.",
+                "Longest Circuit: The longest circuit in the current F1 calendar is the Circuit de Spa-Francorchamps.",
+                "Shortest Circuit: The shortest circuit is the Monaco Grand Prix.",
+                "Most Pole Positions: Lewis Hamilton holds the record for the most pole positions in F1 history.",
+                "First Female Driver: Maria Teresa de Filippis was the first woman to compete in a Formula 1 race.",
+                "Most Races in a Season: The 2021 season featured a record 22 races.",
+                "Historic Win: In 2008, Lewis Hamilton became the first Black driver to win the Formula 1 World Championship.",
+                "Safety Innovations: The introduction of the Halo device in 2018 significantly improved driver safety.",
+                "Unique Trophies: The Hungarian Grand Prix trophy is handmade by Herend Porcelain Manufactory."
+            ];
+
+            const factButton = document.getElementById('factButton');
+            const factDisplay = document.getElementById('factDisplay');
+
+            factButton.addEventListener('click', () => {
+                const randomIndex = Math.floor(Math.random() * facts.length);
+                factDisplay.textContent = facts[randomIndex];
+            });
+        });
+    </script>
+</body>
+</html>
